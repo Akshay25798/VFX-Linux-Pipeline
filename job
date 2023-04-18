@@ -1,0 +1,49 @@
+#!/bin/bash
+#job in script
+#trying to replicate MPC job in method
+#Date 18/04/2023 Time 12:02 AM
+#Author: Akshay kumar
+#useage: job [scene] [shot]
+
+###################################
+
+#getting in puts from user
+scene=$1
+shot=$2
+base='/media/akshay/Ak 1TB/JOB/'
+
+#clear the terminal
+#clear
+
+#sleep for some seconds
+sleep 0.5
+
+#print job path to shell
+echo
+echo
+echo '################# >> JOB INFO << #####################'
+echo
+echo "JOB :  $base$scene$shot/"
+
+
+#sourcing pthe .config/env.sh
+echo "source : $base$scene$shot/config/env.sh"
+
+if [ -f "$base$scene$shot/config/env.sh" ]; then
+    source "$base$scene$shot/config/env.sh"
+fi
+
+#chenge terminal color
+konsoleprofile colors=GreenOnBlack
+
+echo
+echo '################# >> ENVIRONMENT SET << #################'
+echo
+echo
+
+#change directory
+cd '/media/akshay/Ak 1TB/JOB/'$scene/$shot
+$SHELL
+
+#sleep for some seconds
+sleep 0.5
