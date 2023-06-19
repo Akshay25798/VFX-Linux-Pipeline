@@ -10,7 +10,7 @@
 #getting in puts from user
 scene=$1
 shot=$2
-base='/media/akshay/Ak 1TB/JOB/'
+base='/media/akshay/Ak_1TB/JOB/'
 
 #clear the terminal
 #clear
@@ -42,7 +42,7 @@ echo
 echo
 
 #change directory
-cd '/media/akshay/Ak 1TB/JOB/'$scene/$shot
+cd $base$scene/$shot
 $SHELL
 
 #sleep for some seconds
